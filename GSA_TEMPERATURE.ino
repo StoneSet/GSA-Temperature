@@ -2,16 +2,18 @@
 #include <Wire.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
-#include <Adafruit_GFX.h>
 #include <Adafruit_SH1106.h>
-#include "RTClib.h"
-RTC_DS1307 rtc;
+#include <Adafruit_GFX.h>
+#include <TimeLib.h>
+#include <DS1307RTC.h>
 
 #define OLED_RESET 6
 Adafruit_SH1106 display(OLED_RESET);
 
 // Data wire is plugged into port 4 on the Arduino
 #define ONE_WIRE_BUS 4
+
+tmElements_t tm;
 
 const unsigned char epd_bitmap_engine [] PROGMEM = {
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0xff, 0xc0, 0x00, 0x00, 0x01, 0xff, 0xc0, 0x00, 0x00, 
@@ -173,9 +175,6 @@ DallasTemperature sensors(&oneWire);
 
 void setup()   {
 
-  rtc.begin();
-  rtc.adjust(DateTime(__DATE__, __TIME__));
-  
   display.begin(SH1106_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3D (for the 128x64)
   display.clearDisplay();
   display.drawBitmap(0, 0, splash, 128, 64, WHITE);
@@ -198,13 +197,14 @@ void setup()   {
 
 void loop() {
 
+  RTC.read(tm);
+  
   // temperature
-
   sensors.requestTemperatures();
 
-  DateTime now = rtc.now();
-  char heure[10];
-  sprintf(heure, "%02d:%02d:%02d", now.hour(), now.minute(), now.second());
+  //DateTime now = rtc.now();
+  //char heure[10];
+  //sprintf(heure, "%02d:%02d:%02d", now.hour(), now.minute(), now.second());
 
   int temp_engine = sensors.getTempCByIndex(2);
   int temp_out = sensors.getTempCByIndex(0);
@@ -230,9 +230,14 @@ void loop() {
   display.setCursor(18,50);
   display.setTextSize(2);
   display.setTextColor(WHITE);
-  display.println(heure);
+  display.print(tm.Hour);
+  display.print(":");
+  display.print(tm.Minute);
+  display.print(":");
+  display.print(tm.Second);
+  //display.println(heure);
   display.display();
-  delay(2000);
+  delay(1000);
 }
 
 // https://tutoduino.fr/blog-rtc/
