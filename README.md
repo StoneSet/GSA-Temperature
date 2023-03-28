@@ -16,11 +16,12 @@ A must have when this car is your daily...
 1. Have DS18B20 and DS1307 and SH1106 128*64px
 2. Install all sensors and screen on the Citroen GSA dashboard
 3. Address correctly the sensor to the good values
+4. Set the time of the DS1307 with the exemple script named "SetTime" of the RTC library
 4. Crank...... Let it get hotter and voilaaa!
 
 // TODO
 
-* Finish to dev the DS1307 clock
+* Finish to dev the DS1307 clock ✅
 
 <img src="https://cdn.discordapp.com/attachments/517822276889215018/1076918185523155067/IMG_5651.jpg" alt="alt" width="400"><img src="https://cdn.discordapp.com/attachments/517822276889215018/1076918185988739072/IMG_5652.jpg" alt="alt" width="400">
 
