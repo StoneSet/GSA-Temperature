@@ -1,32 +1,46 @@
+# Citroën GSA Temperature Monitoring System
 
-# Citroen GSA Temperature System
+### Simple Temperature Sensor System for Citroën GSA Based on DS18B20
 
-### Simple temperature sensor for Citroen GSA based on DS18B20.
+The Citroën GSA is rare nowadays, but enthusiasts like me still cherish it! 🚗  
+![1231-24](https://github.com/user-attachments/assets/28c70754-3084-4c28-900b-210f2d806add)
+That's why I developed a small temperature monitoring system to ensure a safe and comfortable driving experience.  
 
-Citroen GSA is rare nowadays.
-But some guy loves thems... like me !
+The system includes sensors placed outdoors, indoors, and on the engine to track temperatures while driving.
 
-So I just developped a small monitor system.
-A sensor is placed outdoor, indoor and on the engine to monitor temperature while driving on the road.
+A must-have if this classic is your daily ride! 🛣️
 
-A must have when this car is your daily...
+---
 
-## To use it :
+## How to Use It:
 
-1. Have DS18B20 and DS1307 and SH1106 128*64px
-2. Install all sensors and screen on the Citroen GSA dashboard
-3. Address correctly the sensor to the good values
-4. Set the time of the DS1307 with the exemple script named "SetTime" of the RTC library
-4. Crank...... Let it get hotter and voilaaa!
+1️⃣ **Components Required:**
+   - DS18B20 temperature sensors
+   - DS1307 real-time clock module
+   - SH1106 OLED display (128x64px)
 
-// TODO
+2️⃣ **Installation:**
+   - Mount the sensors and screen on the Citroën GSA dashboard.
 
-* Finish to dev the DS1307 clock ✅
+3️⃣ **Configuration:**
+   - Assign each sensor to its correct location (outdoor, indoor, engine).
+   - Set the time on the DS1307 module using the example "SetTime" script from the RTC library.
 
-<img src="https://cdn.discordapp.com/attachments/517822276889215018/1076918185523155067/IMG_5651.jpg" alt="alt" width="400"><img src="https://cdn.discordapp.com/attachments/517822276889215018/1076918185988739072/IMG_5652.jpg" alt="alt" width="400">
+4️⃣ **Start the System:**
+   - Crank up the engine... let it warm up... and voilà! 🌡️🔥
 
-### Splash screen
-<img src="https://cdn.discordapp.com/attachments/517822276889215018/1076918185200210030/IMG_5653.jpg" alt="alt" width="300">
+---
 
-#
-(c) @StoneSet - http://stoneset.fr/ (2023)
+### TODO:
+✅ Finish developing the DS1307 clock module.
+
+---
+
+<img src="https://github.com/user-attachments/assets/140ef6bf-781a-4ecd-82fb-425c16a6cc0e" alt="alt" width="400">
+
+### Splash Screen :
+<img src="https://github.com/user-attachments/assets/658767af-6571-4778-9c2d-8420577c02db" alt="alt" width="300">
+
+---
+
+(c) @StoneSet - [http://stoneset.fr/](http://stoneset.fr/) (2023)
