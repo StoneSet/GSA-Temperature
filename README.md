@@ -3,7 +3,9 @@
 ### Simple Temperature Sensor System for Citroën GSA Based on DS18B20
 
 The Citroën GSA is rare nowadays, but enthusiasts like me still cherish it! 🚗  
-![1231-24](https://github.com/user-attachments/assets/28c70754-3084-4c28-900b-210f2d806add)
+
+![1231-24](https://github.com/user-attachments/assets/28c70754-3084-4c28-900b-210f2d806add)  
+
 That's why I developed a small temperature monitoring system to ensure a safe and comfortable driving experience.  
 
 The system includes sensors placed outdoors, indoors, and on the engine to track temperatures while driving.
